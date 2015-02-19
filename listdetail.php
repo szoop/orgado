@@ -52,7 +52,7 @@ if ( ! $db_erg )
 			<h3>Users</h3><hr> <?php echo $zeile['users'] ?>
 		</div>
 		<div class="notedisplay">
-			<form method="post" action="php/updatenote.php">
+			<form method="post" action="php/functions.php">
 				<h3>Notiz</h3><hr><textarea name="content" class="form-control" rows="3"><?php echo $zeile['note'] ?> </textarea>
 				<input type="hidden" name="noteid" class="form-control" value="<?php echo $zeile['tasks_id'] ?>">
 				<input type="submit" class="btn btn-default" value="Speichern">
@@ -69,7 +69,7 @@ if ( ! $db_erg )
 		</div>
 		<div class="commentsdisplay">
 			<h3>Comments:</h3><hr> 
-			<form method="post" action="php/newcomment.php">
+			<form method="post" action="php/functions.php">
 				<input class="form-control newcomment" name="newcomment" type="text" placeholder="kommentar schreiben...">
 				<input type="hidden" name="taksname" value="<?php echo $zeile['tasks_name'] ?>">
 				<input type="submit" class="btn btn-default savecommentbtn" value="Kommentar speichern">
@@ -86,7 +86,7 @@ if ( ! $db_erg )
 			<blockquote>
 				<p><?php echo $zeile['commentcontent'] ?></p>
 				<footer><?php echo $zeile['author'] ?> at <?php echo $zeile['created_at'] ?></cite></footer>
-				<a href="php/deletecomment.php?id=<?php echo $zeile['comments_id'] ?>" class="deletecomment"> l&ouml;schen</a>
+				<a href="php/functions.php?id=<?php echo $zeile['comments_id'] ?>" class="deletecomment"> l&ouml;schen</a>
 			</blockquote>
 
 			
@@ -102,11 +102,11 @@ if ( ! $db_erg )
 <!-- Jquery ausklappen der Tasks -->
 <script type="text/javascript">
  	$('.content1').hide();
-	$( ".expander1" ).click(function() {
+	$( '.expander1' ).click(function() {
  		$('.content1').fadeToggle();
 	});
 	$('.content2').hide();
-	$( ".expander2" ).click(function() {
+	$( '.expander2' ).click(function() {
  		$('.content2').fadeToggle();
 	});
 
