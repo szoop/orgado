@@ -1,8 +1,8 @@
 <?php 
-$servername = "mysql5.fc-steinegg.de";
-$username = "db164932_1";
-$password = "asd123ggh";
-$dbname = "db164932_1";
+$servername = "xxxx";
+$username = "xxxx";
+$password = "xxxx";
+$dbname = "xxxx";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
